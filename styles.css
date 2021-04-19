@@ -19,7 +19,6 @@ html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
             box-sizing: border-box;
   }
   
-
 .main{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
@@ -27,6 +26,13 @@ html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
   justify-content: center;
   height: 50%;
   width: 50%;
-  margin: 8rem auto;
+  margin: 8rem auto 3rem;
   color: crimson;
+}
+
+.gif-container{
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  margin: 0 auto;
 }
