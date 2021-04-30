@@ -1,8 +1,8 @@
 @charset 'UTF-8';
 @font-face {
-  font-family: 'riviera_nightslight';
-  src: url('/assets/rivieranights-light-webfont.woff2') format('woff2'),
-       url('/assets/rivieranights-light-webfont.woff') format('woff');
+  font-family: "riviera_nightslight";
+  src: url("/assets/rivieranights-light-webfont.woff2") format("woff2"),
+       url("/assets/rivieranights-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -29,7 +29,7 @@ html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
   }
   
 .main{
-  font-family: 'riviera_nightslight', Helvetica, Arial, sans-serif;
+  font-family: "riviera_nightslight", Helvetica, Arial, sans-serif;
   font-size: 2.75rem;
   text-align: center;
   line-height: calc(2.75rem * 1.25);
