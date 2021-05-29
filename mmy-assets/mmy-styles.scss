@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+@import 'taipei-sans-tc';
+@import 'taipei-sans-tc/dist/Light/TaipeiSansTCBeta-Light.css';
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
+
+@font-face {
+    font-family: 'jinxuan-fresh-book';
+    src: url('/mmy-assets/webfonts/jinxuan-fresh-book.eot');
+    src: url('/mmy-assets/webfonts/jinxuan-fresh-book.eot?#iefix') format('embedded-opentype'),
+    url('/mmy-assets/webfonts/jinxuan-fresh-book.woff2') format('woff2'), url('/mmy-assets/webfonts/jinxuan-fresh-book.woff') format('woff'), url('/mmy-assets/webfonts/jinxuan-fresh-book.ttf') format('truetype');
+}
