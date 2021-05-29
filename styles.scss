@@ -1,45 +1,45 @@
 @charset 'UTF-8';
 @font-face {
-  font-family: "riviera_nightslight";
-  src: url("/assets/rivieranights-light-webfont.woff2") format("woff2"),
-       url("/assets/rivieranights-light-webfont.woff") format("woff");
+  font-family: 'riviera_nightslight';
+  src: url('/assets/rivieranights-light-webfont.woff2') format('woff2'),
+       url('/assets/rivieranights-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 //Typography
-$font-family--yujin: "riviera_nightslight";
+$font-family--yujin: 'riviera_nightslight';
 $font-size--yj-btn: 2.25rem;
 
 
 html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, menu, header, footer {
-    border: 0;
-    font-family: inherit;
-    font-size: 100%;
-    font-style: inherit;
-    font-weight: inherit;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
-  }
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
   
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-  html, body{
-    height: 100%;
-    background-color: #0d0f05;
-  }
+html, body{
+  height: 100%;
+  background-color: #0d0f05;
+}
   
 .main{
-  font-family: "riviera_nightslight", Helvetica, Arial, sans-serif;
+  font-family: 'riviera_nightslight', Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
