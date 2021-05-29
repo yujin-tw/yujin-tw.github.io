@@ -1,2 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap");
+@font-face {
+  font-family: "jinxuan-fresh-book";
+  src: url("/mmy-assets/webfonts/jinxuan-fresh-book.eot");
+  src: url("/mmy-assets/webfonts/jinxuan-fresh-book.eot?#iefix") format("embedded-opentype"), url("/mmy-assets/webfonts/jinxuan-fresh-book.woff2") format("woff2"), url("/mmy-assets/webfonts/jinxuan-fresh-book.woff") format("woff"), url("/mmy-assets/webfonts/jinxuan-fresh-book.ttf") format("truetype");
+}
+html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, menu, header, footer {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
 
-/*# sourceMappingURL=mmy-styles.css.map *//*# sourceMappingURL=mmy-styles.css.map */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  font-family: "PT Sans", sans-serif, Helvetica;
+  font-size: 5rem;
+  font-style: italic;
+  margin: auto 0;
+  width: 100%;
+}
+
+.jin-test {
+  font-family: "jinxuan-fresh-book", sans-serif, Helvetica;
+}
+
+.taipei-test {
+  font-family: "taipei-sans-tc";
+}/*# sourceMappingURL=mmy-styles.css.map */
