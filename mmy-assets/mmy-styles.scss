@@ -1,13 +1,27 @@
 @charset 'UTF-8';
 
+// Import Webfonts
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/taipei-sans-tc');
+@import url('https://cdn.jsdelivr.net/npm/taipei-sans-tc/dist/Light/TaipeiSansTCBeta-Light.css');
 
-@font-face {
-    font-family: 'jinxuan-fresh-book';
-    src: url('/mmy-assets/webfonts/jinxuan-fresh-book.eot');
-    src: url('/mmy-assets/webfonts/jinxuan-fresh-book.eot?#iefix') format('embedded-opentype'),
-    url('/mmy-assets/webfonts/jinxuan-fresh-book.woff2') format('woff2'), url('/mmy-assets/webfonts/jinxuan-fresh-book.woff') format('woff'), url('/mmy-assets/webfonts/jinxuan-fresh-book.ttf') format('truetype');
-}
+// Typography
+$font-family--en-major: 'PT sans', Helvetica, Arial, sans-serif;
+$font-family--zh-major: 'taipei sans tc', Helvetica, Arial, sans-serif;
+$font-size--d-navbar: 1.125rem;
+$font-size--d-slogan: 4.5rem;
+
+// Color
+$color-bkg--light: hsl(0,100,99);
+$color-bkg--dark: hsl(72,50,4);
+$color-font--light: hsl(0,0,100);
+$color-font--dark: hsl(72,50,4);
+$color-font--light-grey: hsl(225,3,63);
+$color-font--dark-grey: hsl(0,2,44);
+$color-font--zh-text: hsl(240,4,14);
+
+
+
 
 // Reset
 html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, menu, header, footer {
@@ -30,22 +44,65 @@ html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
   box-sizing: border-box;
 }
 
-html, body{
-  height: 100%;
+html, body {
+    background-color: $color-bkg--light;
+    height: 100%;
 }
 
-main{
-    font-family: 'PT Sans', sans-serif, Helvetica;
-    font-size: 5rem;
-    font-style: italic;
-    margin: auto 0;
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: 5rem;
     width: 100%;
+    padding: 0 clamp(9rem, 10.4%, 12.5rem);
+    background-color: $color-bkg--light;
+    backdrop-filter: blur(1em);
+    z-index: 1000;
 }
 
-.jin-test{
-    font-family: 'jinxuan-fresh-book', sans-serif, Helvetica;
+
+.site-header__nav-list {
+    font-family: $font-family--en-major;
+    font-size: $font-size--d-navbar;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    li {
+        list-style: none;
+        .header-list__link {
+            color: $color-font--dark;
+            text-decoration: none;
+        }
+        & :hover{
+            border-bottom: 0.15em solid $color-font--dark;
+        }
+    }
 }
 
-.taipei-test{
-    font-family: 'taipei-sans-tc';
+.site-header__logo {
+    width: 3rem;
+}
+
+.site-content{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding: 7.5rem clamp(9rem, 10.4%, 12.5rem) 0;
+    margin: 5rem 0 0;   
+}
+
+.site-slogan{
+    font-family: $font-family--zh-major;
+    font-size: $font-size--d-slogan;
+    font-weight: 200;
+    width: clamp(15rem, 97%, 80rem);
+}
+
+.index-project-card{
+    font-size: 18px;
+    margin-top: 5rem;
 }

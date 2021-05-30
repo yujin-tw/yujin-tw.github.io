@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap");
-@font-face {
-  font-family: "jinxuan-fresh-book";
-  src: url("/mmy-assets/webfonts/jinxuan-fresh-book.eot");
-  src: url("/mmy-assets/webfonts/jinxuan-fresh-book.eot?#iefix") format("embedded-opentype"), url("/mmy-assets/webfonts/jinxuan-fresh-book.woff2") format("woff2"), url("/mmy-assets/webfonts/jinxuan-fresh-book.woff") format("woff"), url("/mmy-assets/webfonts/jinxuan-fresh-book.ttf") format("truetype");
-}
+@import url("https://cdn.jsdelivr.net/npm/taipei-sans-tc");
+@import url("https://cdn.jsdelivr.net/npm/taipei-sans-tc/dist/Light/TaipeiSansTCBeta-Light.css");
 html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, menu, header, footer {
   border: 0;
   font-family: inherit;
@@ -25,21 +22,64 @@ html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
 }
 
 html, body {
+  background-color: snow;
   height: 100%;
 }
 
-main {
-  font-family: "PT Sans", sans-serif, Helvetica;
-  font-size: 5rem;
-  font-style: italic;
-  margin: auto 0;
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: 5rem;
   width: 100%;
+  padding: 0 clamp(9rem, 10.4%, 12.5rem);
+  background-color: snow;
+  -webkit-backdrop-filter: blur(1em);
+          backdrop-filter: blur(1em);
+  z-index: 1000;
 }
 
-.jin-test {
-  font-family: "jinxuan-fresh-book", sans-serif, Helvetica;
+.site-header__nav-list {
+  font-family: "PT sans", Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+.site-header__nav-list li {
+  list-style: none;
+}
+.site-header__nav-list li .header-list__link {
+  color: #0d0f05;
+  text-decoration: none;
+}
+.site-header__nav-list li :hover {
+  border-bottom: 0.15em solid #0d0f05;
 }
 
-.taipei-test {
-  font-family: "taipei-sans-tc";
+.site-header__logo {
+  width: 3rem;
+}
+
+.site-content {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 7.5rem clamp(9rem, 10.4%, 12.5rem) 0;
+  margin: 5rem 0 0;
+}
+
+.site-slogan {
+  font-family: "taipei sans tc", Helvetica, Arial, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 200;
+  width: clamp(15rem, 97%, 80rem);
+}
+
+.index-project-card {
+  font-size: 18px;
+  margin-top: 5rem;
 }/*# sourceMappingURL=mmy-styles.css.map */
