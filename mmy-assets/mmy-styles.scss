@@ -9,6 +9,7 @@
 $font-family--en-major: 'PT sans', Helvetica, Arial, sans-serif;
 $font-family--zh-major: 'taipei sans tc', Helvetica, Arial, sans-serif;
 $font-size--d-navbar: 1.125rem;
+$font-size--m-navbar: 0.875rem;
 $font-size--d-slogan: 4.5rem;
 
 // Color
@@ -20,8 +21,22 @@ $color-font--light-grey: hsl(225,3,63);
 $color-font--dark-grey: hsl(0,2,44);
 $color-font--zh-text: hsl(240,4,14);
 
-
-
+// Media Queries
+@mixin media-query($size){
+    @if $size == iPad-Pro-12 {
+        @media screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+          @content;
+        }
+    } @else if $size == tablet {
+        @media screen and (min-width: 768px) and (max-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+          @content;
+        }
+    } @else if $size == mobile {
+        @media screen and (min-width: 375px) and (max-width: 812px) {
+          @content;
+      }
+    }
+}
 
 // Reset
 html, body, content, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, menu, header, footer {
@@ -57,12 +72,14 @@ html, body {
     top: 0;
     height: 5rem;
     width: 100%;
-    padding: 0 clamp(9rem, 10.4%, 12.5rem);
-    background-color: $color-bkg--light;
+    padding: 0 clamp(6rem, 10.4%, 12.5rem);
+    background-color: rgba(255,250,250,0.5);
     backdrop-filter: blur(1em);
     z-index: 1000;
+    @include media-query(mobile){
+        padding: 0 1.25em;
+    }
 }
-
 
 .site-header__nav-list {
     font-family: $font-family--en-major;
@@ -70,39 +87,51 @@ html, body {
     font-style: italic;
     display: flex;
     justify-content: space-between;
-    width: 25%;
+    width: clamp(12em, 25%, 20em);
     li {
         list-style: none;
-        .header-list__link {
+        .header__nav-link {
             color: $color-font--dark;
             text-decoration: none;
         }
-        & :hover{
+        &:hover {
             border-bottom: 0.15em solid $color-font--dark;
         }
+    }
+    @include media-query(mobile){
+        font-size: $font-size--m-navbar;
     }
 }
 
 .site-header__logo {
     width: 3rem;
+    @include media-query(mobile){
+        width: 2.25rem;
+    }
 }
 
-.site-content{
+.site-content {
     position: relative;
     width: 100%;
     min-height: 100%;
-    padding: 7.5rem clamp(9rem, 10.4%, 12.5rem) 0;
-    margin: 5rem 0 0;   
+    padding: 7.5rem clamp(6rem, 10.4%, 12.5rem) 0;
+    margin: 5rem 0 0;
+    @include media-query(mobile){
+        padding: 0 1.25em;
+    }   
 }
 
-.site-slogan{
+.site-slogan {
     font-family: $font-family--zh-major;
     font-size: $font-size--d-slogan;
     font-weight: 200;
     width: clamp(15rem, 97%, 80rem);
+    @include media-query(mobile){
+        font-size: 2.25rem;
+    }
 }
 
-.index-project-card{
+.index-project-card {
     font-size: 18px;
     margin-top: 5rem;
 }
