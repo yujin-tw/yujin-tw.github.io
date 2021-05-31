@@ -95,7 +95,8 @@ html, body {
             text-decoration: none;
         }
         &:hover {
-            border-bottom: 0.15em solid $color-font--dark;
+            text-decoration: underline;
+            // border-bottom: 0.15em solid $color-font--dark;
         }
     }
     @include media-query(mobile){

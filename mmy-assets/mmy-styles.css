@@ -62,7 +62,7 @@ html, body {
   text-decoration: none;
 }
 .site-header__nav-list li:hover {
-  border-bottom: 0.15em solid #0d0f05;
+  text-decoration: underline;
 }
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .site-header__nav-list {
